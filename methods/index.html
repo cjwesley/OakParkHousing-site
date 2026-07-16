@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How this evidence was built — Cory J. Wesley — Oak Park Village Trustee</title>
+<meta name="description" content="What each dataset can and cannot prove, stated before anyone asks.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://cjwesley.github.io/OakParkHousing-site/methods/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How this evidence was built — Cory J. Wesley — Oak Park Village Trustee">
+<meta property="og:description" content="What each dataset can and cannot prove, stated before anyone asks.">
+<meta property="og:url" content="https://cjwesley.github.io/OakParkHousing-site/methods/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How this evidence was built — Cory J. Wesley — Oak Park Village Trustee">
+<meta name="twitter:description" content="What each dataset can and cannot prove, stated before anyone asks.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>:root{
+    --navy:#0C2338; --navy2:#143752;
+    --gold:#E3B23C; --gold-soft:#F0D9A6;
+    --paper:#FBFAF7; --ink:#182635;
+    --muted:#5A6B7C; --line:#E4E0D5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);
+    font-family:'Public Sans',system-ui,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  a{color:var(--navy);text-decoration-color:var(--gold);text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+  /* masthead */
+  header.mast{background:var(--navy);color:#fff;padding:20px 0}
+  .mast .wrap{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+  .mast .who{font-family:'Playfair Display',serif;font-weight:700;font-size:18px}
+  .mast .who span{color:var(--gold)}
+  .mast .role{font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft)}
+
+  /* question hero */
+  .hero{padding:56px 0 8px}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .eyebrow b{color:var(--gold);font-weight:600}
+  h1.q{font-family:'Playfair Display',serif;font-weight:800;
+    font-size:clamp(30px,5vw,44px);line-height:1.12;margin:14px 0 0;
+    text-wrap:balance}
+  .keyline{margin:22px 0 0;padding-left:18px;border-left:3px solid var(--gold);
+    font-size:20px;line-height:1.5;font-weight:600;color:var(--navy)}
+
+  /* 30-second answer */
+  .thirty{margin:36px 0 0;font-size:19px;line-height:1.7}
+  .thirty .label{font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
+    display:block;margin-bottom:10px}
+
+  /* THE RECEIPT — signature element */
+  .receipt{margin:44px 0;border:1px solid var(--line);border-radius:6px;
+    background:#fff;overflow:hidden}
+  .receipt .rhead{display:flex;justify-content:space-between;align-items:center;
+    padding:12px 18px;border-bottom:2px solid var(--navy);
+    font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.16em;text-transform:uppercase}
+  .receipt .rhead .t{color:var(--navy);font-weight:600}
+  .rrow{display:grid;grid-template-columns:1fr auto;gap:6px 20px;
+    padding:14px 18px;border-bottom:1px dashed var(--line)}
+  .rrow:last-child{border-bottom:none}
+  .rrow .claim{font-size:15px;color:var(--ink)}
+  .rrow .val{font-family:'IBM Plex Mono',monospace;font-weight:600;
+    font-size:16px;color:var(--navy);text-align:right;white-space:nowrap}
+  .rrow .meta{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .srctag{font-family:'IBM Plex Mono',monospace;font-size:11px;
+    color:var(--muted);background:var(--paper);border:1px solid var(--line);
+    border-radius:3px;padding:2px 7px}
+  .badge{font-family:'IBM Plex Mono',monospace;font-size:10px;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--navy);
+    background:var(--gold);border-radius:3px;padding:2px 7px;font-weight:600}
+  .rrow .note{grid-column:1/-1;font-size:13px;color:var(--muted)}
+
+  /* body */
+  .deep{margin:8px 0 0}
+  .deep p{margin:0 0 18px;max-width:66ch}
+  .deep strong{color:var(--navy)}
+
+  /* cross-refs */
+  .also{margin:48px 0 0;padding:22px 0 0;border-top:1px solid var(--line)}
+  .also .label{font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .also .ref{display:block;padding:12px 16px;margin-bottom:10px;background:#fff;
+    border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px;
+    text-decoration:none}
+  .also .ref .rq{font-weight:600;color:var(--navy)}
+  .also .ref .rr{font-size:14px;color:var(--muted);margin-top:2px}
+
+  footer.site{margin-top:72px;background:var(--navy);color:var(--gold-soft);padding:28px 0}
+  footer.site .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+    font-size:13px}
+  footer.site .dom{font-family:'IBM Plex Mono',monospace;color:var(--gold)}
+  @media (prefers-reduced-motion:no-preference){
+    .receipt{transition:box-shadow .2s}
+    .receipt:hover{box-shadow:0 2px 14px rgba(12,35,56,.08)}
+  }
+  .mitem{background:#fff;border:1px solid var(--line);border-radius:5px;
+    padding:18px;margin-bottom:14px}
+  .mitem .from{font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .mitem p{font-size:15px;color:var(--ink)}
+</style></head>
+<body>
+<header class="mast"><div class="wrap">
+  <a class="who" href="/OakParkHousing-site/" style="color:inherit;text-decoration:none">Cory J. <span>Wesley</span></a>
+  <div class="role">Oak Park Village Trustee</div>
+</div></header>
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Methods</div>
+    <h1 class="q">How this evidence was built</h1>
+    <p class="keyline">What each dataset can and cannot prove, stated before anyone asks. Items leave this page when the data that closes them lands.</p>
+  </section>
+  <div style="margin-top:36px">
+  
+  <div class="mitem">
+    <div class="from"><a href="/OakParkHousing-site/questions/luxury-filtering/" style="color:inherit;text-decoration:none">Nº1 — New construction is all luxury. How does that help affordability?</a></div>
+    <p>IHDA's AHPAA count is a threshold count (≤60% AMI), not deed- restricted, with a regional-AMI denominator. The strong claim — affordable stock grew 27x faster through supply than mandate — stands regardless. The causal claim (new construction caused the filtering) closes with the Oak Park Class 2/3 median rent series vs. metro over the same window. Pull pending.
+</p>
+  </div>
+  
+  </div>
+</main>
+<footer class="site"><div class="wrap">
+  <span>Cory J. Wesley · Oak Park Village Trustee</span><span class="dom">corywesley.com</span>
+</div></footer>
+</body></html>
